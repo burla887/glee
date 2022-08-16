@@ -1,6 +1,7 @@
 @import 'vars';
 @import 'fonts';
 @import 'reset';
+@import 'libs';
 @import 'global';
 
 
@@ -82,7 +83,7 @@
    &__items{
       width: 110px;
       height: 30px;
-      background-color: #fcd7b6;
+      background-color: $header-bg;
       border-radius: 45px;
       position: relative;
       display: flex;
@@ -155,6 +156,237 @@
 
 }
 
+.footer-top{
+   padding: 85px 0 75px;
+   display: flex;
+   justify-content: space-between;
+   font-size: 14px;
+   line-height: 24px;
+   border-bottom: 1px solid #dae4e9;
+   &__logo{
+      display: block;
+      margin-bottom: 30px;
+   }
+
+   &__item-contact{
+      width: 200px;
+      color: $secondary;
+   }
+   &__address{
+      line-height: 32px;
+   }
+   &__address,
+   &__phone,
+   &__email{
+      display: block;
+     
+   }
+   &__address,
+   &__phone{
+      margin-bottom: 15px;
+   }
+   &__title{
+      color:$title;
+      @extend %DMSans-Bold;
+      text-transform: uppercase;
+      font-size: 16px;
+      line-height: 21px;
+      margin-bottom: 30px;
+      margin-top: 15px;
+   }
+
+   &__items{
+      color: $secondary;
+   }
+
+   &__list{
+      line-height: 32px;
+      margin-bottom: 5px;
+   }
+
+   &__item-form{
+      width: 270px;
+   }
+
+   &__text{
+      margin-bottom: 40px;
+   }
+   &__input{
+      background-color: $bg;
+      padding: 15px 5px 15px 15px;
+      &::placeholder{
+         color: #234969;
+         font-size: 12px;
+         @extend %DMSans-Regular;
+      }
+   }
+   &__btn{
+      background-color: $accent;
+      color: #fff;
+      padding:15px ;
+      @extend %DMSans-Regular;
+   }
+}
+
+.footer-bottom{
+   height: 90px;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   color: $secondary;
+   &__copyright{
+      
+      font-size: 14px;
+      line-height: 32px;
+   }
+
+   &__link{
+      padding: 0 15px;
+      &:not(:last-child){
+      border-right: 1px solid $secondary;} 
+   }
+}
+
+.top-slider{
+   &__inner{
+   padding: 215px 0 0 0;
+   }
+   &__bg{
+      background-color:$header-bg;
+   }
+   &__item{
+      display: flex !important;
+      
+      justify-content: space-between;
+   }
+
+   &__title{
+      width: 470px;
+      font-size: 72px;
+      line-height: 70px;
+      @extend %Rubik-Medium
+   }
+
+   &__descr{
+      width: 370px;
+      font-size: 18px;
+      line-height: 30px;
+     
+   }
+   
+   &__btn{
+      margin-top: 70px;
+      display: block;
+      width: 150px;
+      position: relative;
+      padding: 21px 25px;
+      background-color: $accent;
+      color: #fff;
+      font-size: 15px;
+      line-height: 12px;
+      @extend %Rubik-Medium;
+      margin-bottom: 200px;
+      &::before{
+         content: "";
+         position: absolute;
+         background-image: url('../images/icons/shop-arrow.png');
+         background-repeat: no-repeat;
+         width: 22px;
+         height: 10px;
+         right: 18px;
+         top: 50%;
+         transform: translateY(-50%);      
+      }
+   }
+
+   .slick-dots{
+      display: flex;
+      justify-content: center;
+      padding-bottom: 40px;
+      @extend %Rubik-Medium;
+      color: $default;
+   }
+   li{
+      margin-left: 10px;
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      background-color: #fde3cc;
+      
+      text-align: center;
+   }
+
+   .slick-dots button{
+      color: $default;
+   
+   }
+
+   .slick-active button{
+      color: $default;
+      border-radius: 50%;
+      width: 28px;
+      height: 28px;
+      background-color: #fff;
+   }
+
+  
+}
+
+
+.benefits{
+   position: relative;
+   &__bg{
+      background-color: $bg;
+      
+   }
+   &__inner{
+      padding: 40px 0;
+      display: flex;
+      justify-content: space-evenly
+   }
+
+   &__item{
+      display: flex;
+      width: 33.33%;
+      justify-content: center;
+   }
+
+   &__img{
+      object-fit: contain;
+      margin-right: 25px;
+      margin-top: 8px;
+      display: inline;
+   }
+
+   &__content{
+      width: 210px;
+   }
+
+   &__title{
+      color: #414141;
+      font-size: 18px;
+      line-height: 40px;
+      @extend %DMSans-Bold;
+   }
+   &__item-decore{
+      
+      &::after,
+      &::before{
+         content: "";
+         position:absolute;
+         height: 100%;
+         width: 1px;
+         background-color: #e8e4df;
+         top:0;
+      }
+      &::after{
+         left: 33%;
+      }
+      &::before{
+         right: 33%;
+      }
+   }   
+}
 
 
 @import 'media';
