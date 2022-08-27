@@ -13,6 +13,11 @@
    font-weight: 700;
 }
 
+%Rubik-light{
+   font-family: 'Rubik-light', sans-serif;
+   font-weight: 300;
+}
+
 %Rubik-Regular{
    font-family: 'Rubik-Regular', sans-serif;
    font-weight: 400;
@@ -22,6 +27,12 @@
    font-family: 'Rubik-Medium', sans-serif;
    font-weight: 500;
 }
+%Rubik-Bold{
+   font-family: 'Rubik-Bold', sans-serif;
+   font-weight: 700;
+}
+
+
 
 $default: #243f4d;
 $accent: #a3bbc8;
@@ -30,3 +41,10 @@ $secondary: #8b8b8b;
 $title: #1f2044;
 $header-bg: #fcd7b6;
 $bg: #fef7f0;
+
+%title{
+   @extend %DMSans-Bold;
+   color: $title;
+   font-size: 36px;
+   line-height: 32px;
+}

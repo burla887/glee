@@ -670,10 +670,14 @@
       }
    }
 
+.partners.partners--single{
+   padding: 75px 0 85px;
+}
 
 .partners{
    background-color: $bg;
    padding: 260px 0 85px;
+   
    &__inner{
       display: flex;
       justify-content: space-around;
@@ -684,6 +688,8 @@
       object-fit: contain;
    }
 }
+
+
 
 .week{
    padding: 70px 0;
@@ -776,12 +782,10 @@
       margin-bottom: 7px;
       color: $title;
    }
-   &__links{
-   }
-   
    &__link{
       color: #222933;
       font-size: 14px;
+      transition: all .3s;
       padding: 0 10px;
       position: relative;
          &::after{
@@ -791,12 +795,318 @@
             top: 50%;
             transform: translateY(-50%);
             font-size: 14px;
+      color: #222933;
+      
       }
+     
       &:first-child::after{
          content: '';
       }
    }
-
+   &__link:hover{
+      color:$accent;
+   }
 }
+
+
+.login{
+   max-width: 470px;
+   width: 100%;
+   margin: 0 auto;
+   padding: 120px 0;
+   &__form-label{
+      display: block;
+      font-size: 14px;
+      color: #436372;
+      margin-bottom: 25px;
+   }
+   &__form-input{
+      width: 100%;
+      height: 60px;
+      margin-top: 10px;
+      padding: 0 15px;
+      display: block;
+      border: 1px solid #f6f6f6
+   }
+
+   &__form-btn{
+      background-color: $accent;
+      color: #fff;
+      width: 100%;
+      text-align: center;
+      padding: 15px 0;
+      font-size: 18px;
+      @extend %Rubik-Medium;
+      margin-bottom: 30px;
+      cursor: pointer;
+   }
+
+   &__form-inner{
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 30px;
+      border-bottom: 1px solid #f6f6f6;
+
+   }
+   &__form-link{
+      color: #436372;
+   }
+
+   &__link{
+      text-align: center;
+      display: block;
+      color: #436372;
+      margin-bottom: 25px;
+      font-size: 14px;
+      line-height: 24px;
+      @extend %Rubik-Medium;
+   }
+
+   &__btn{
+      display: block;
+      width: 100%;
+      padding: 20px 0;
+      border: 1px solid $accent;
+      font-size: 18px;
+      @extend %Rubik-Medium;
+      color: $title;
+      text-align: center
+   }
+}
+
+
+.about-descr{
+   padding: 120px 0;
+   &__inner{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+   }
+
+   &__content{
+      width: 570px;
+   }
+
+   &__top{
+      display: flex;
+      align-items: center;
+      margin-bottom: 40px;
+      &-num{
+         font-size: 140px;
+         @extend %Rubik-Bold;
+         color: $accent;
+         margin-right: 30px;
+      }
+      
+   }
+
+   &__middle{
+      &-title{
+         font-size: 36px;
+         @extend %DMSans-Bold;
+         line-height: 32px;
+         color: $title;
+         margin-bottom: 45px;
+      }
+
+      &-text{
+         padding-bottom: 30px;
+         border-bottom: 3px solid #ebeef3;
+      }
+   }
+}
+
+.about-bottom{
+   display: flex;
+   justify-content: space-between;
+   padding-top: 35px;
+   &__item{
+      display: flex;
+      align-items: center;
+      &-img{
+         margin-right: 15px;
+      }
+
+      &-inner{
+         text-align: center;
+         @extend %DMSans-Bold;
+      }
+      &-num{
+         color:$title;
+         font-size: 36px;
+         line-height: 38px;
+      }
+      &-descr{
+         font-size: 16px;
+         line-height: 17px;
+         color: #4c4c4c
+      }
+   }
+}
+
+.about-benefit{
+   padding: 90px 0 75px;
+   background-color: $header-bg;
+   &__inner{
+      display: flex;
+      justify-content: space-around;
+      align-items: baseline;
+   }
+   &__item{
+      @extend %DMSans-Bold;
+      text-align: center;
+      &-inner{
+         display: inline-block;
+         position: relative;
+         &::after{
+            content: "";
+            position: absolute;
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            background-color: $accent;
+            bottom: 14px;
+            right: -16px;
+            opacity: .7;
+         }
+      }
+      &-img{
+         margin: 0 auto;
+         margin-bottom: 15px;
+         
+      }
+      &-title{
+         font-size: 36px;
+         line-height: 32px;
+         margin-bottom: 20px;
+      }
+
+      &-text{
+         font-size: 18px;
+         line-height: 32px;
+         
+      }
+   }
+}
+
+.team{
+   padding: 120px 0 60px;
+   &__inner{
+      display: flex;
+      justify-content: space-between;
+   }
+   &__text{
+      max-width: 300px;
+      width: 100%;
+      margin-right: 100px;
+   }
+
+   &__title{
+      margin-bottom: 35px;
+   }
+   &__descr{
+      margin-bottom: 40px;
+   }
+
+   &__link{
+      font-size: 15px;
+      line-height: 12px;
+      display: block;
+      width: 140px;
+      padding: 20px;
+      background-color: $accent;
+      border-radius: 5px;
+      position: relative;
+      transition: all .3s;
+      color: #fff;
+      &::after{
+         content: "";
+         position: absolute;
+         background-image: url('../images/about/icons/team-arrow.svg');
+         background-repeat: no-repeat;
+         width: 22px;
+         height: 10px;
+         right: 18px;
+         top: 50%;
+         
+         transform: translateY(-50%);
+      }
+   }
+   &__content{
+      display: flex;
+      
+      column-gap: 30px;
+      flex-wrap:wrap;
+      
+   }
+
+   &__item{
+      width: 370px;
+
+      &-inner{
+         width: 285px;
+         padding: 30px 20px;
+         display: flex;
+         justify-content: space-between;
+         box-shadow: 0px 6px 57px 0px rgba(37, 37, 37, 0.05);
+         background-color: #fff;
+         align-items: center;
+         transform: translatey(-50%)
+      }
+
+      &-name{
+         @extend %title;
+         font-size: 22px;
+         line-height: 26px;
+      }
+
+      &-post{
+         color: #565872;
+      }
+
+      
+   }
+   &__item-links{
+      display: flex;
+      gap: 10px;
+   }
+
+   &__item-link{
+      display: block;
+      width: 40px;
+      height: 40px;
+      background-color: #f6f6f6;
+      border-radius: 50%
+   }
+
+   &__item-icon{
+      margin: 25% auto;
+   }
+}
+
+.terms{
+   padding-top: 110px;
+   &__item:not(:last-child){
+      margin-bottom: 70px;
+   }
+
+   &__title{
+      @extend %Rubik-Medium;
+      font-size: 24px;
+      line-height: 40px;
+      color: $title;
+      margin-bottom: 20px;
+   }
+   &__content{
+      display: flex;
+      margin-bottom: 25px;
+      &-num{
+         margin-right: 10px;
+
+      }
+   }
+}
+
+
 
 @import 'media';
