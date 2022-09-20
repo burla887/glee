@@ -1,0 +1,139 @@
+.footer-top{
+   padding: 85px 0 75px;
+   display: flex;
+   justify-content: space-between;
+   font-size: 14px;
+   line-height: 24px;
+   flex-wrap: wrap;
+   border-bottom: 1px solid #dae4e9;
+   &__logo{
+      display: block;
+      margin-bottom: 30px;
+   }
+
+   &__item-contact{
+      width: 200px;
+      color: $secondary;
+      
+   }
+   &__address{
+      line-height: 32px;
+   }
+   &__address,
+   &__phone,
+   &__email{
+      display: block;
+      transition: all .3s;
+      &:hover{
+         color: $default;
+      }
+   }
+   &__address,
+   &__phone{
+      margin-bottom: 15px;
+   }
+   &__title{
+      color:$title;
+      @extend %DMSans-Bold;
+      text-transform: uppercase;
+      font-size: 16px;
+      line-height: 21px;
+      margin-bottom: 30px;
+      margin-top: 15px;
+   }
+
+   &__items{
+      color: $secondary;
+      
+   }
+
+   &__list{
+      line-height: 32px;
+      margin-bottom: 5px;
+      transition: all .3s;
+      &:hover{
+         color: $default;
+      }
+   }
+
+   &__item-form{
+      width: 270px;
+   }
+
+   &__text{
+      margin-bottom: 40px;
+   }
+   &__input{
+      background-color: $bg;
+      padding: 15px 5px 15px 15px;
+      &::placeholder{
+         color: #234969;
+         font-size: 12px;
+         @extend %DMSans-Regular;
+      }
+   }
+   &__btn{
+      background-color: $accent;
+      color: #fff;
+      padding:15px ;
+      @extend %DMSans-Regular;
+      transition: all .3s;
+      &:hover{
+         background-color: $default;
+      }
+   }
+}
+
+.footer-bottom{
+   height: 90px;
+   display: flex;
+   
+   justify-content: space-between;
+   align-items: center;
+   color: $secondary;
+   &__copyright{
+      
+      font-size: 14px;
+      line-height: 32px;
+   }
+
+   &__link{
+      transition: all .3s;
+      padding: 0 15px;
+      &:not(:last-child){
+      border-right: 1px solid $secondary;
+      } 
+      &:hover{
+         color: $default;
+      }
+   }
+}
+
+@media (max-width: 950px) {
+   .footer-top{
+      &__item-form{
+         order: 5;
+         width: 100%;
+      }
+   }
+   .footer-bottom{
+      flex-direction: column;
+      height: auto;
+      padding: 15px 0;
+   }
+}
+@media (max-width: 600px) {
+   .footer-top{
+      &__item:nth-child(2){
+         order: 2;
+         width: 100%;
+      }
+      &__title{
+         margin-bottom: 10px;
+      }
+      &__item:nth-child(3){
+         order: 3;
+         width: 100%;
+      }
+   }
+}

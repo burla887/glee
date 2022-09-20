@@ -1,0 +1,139 @@
+.about-descr{
+   padding: 120px 0;
+   &__inner{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+   }
+   &__img-box{
+      max-width: 570px;
+      margin-right: 30px;
+
+   }
+   
+
+   &__content{
+      width: 100%;
+      max-width: 570px;
+   }
+
+   &__top{
+      display: flex;
+      align-items: center;
+      margin-bottom: 40px;
+      &-num{
+         font-size: 140px;
+         @extend %Rubik-Bold;
+         color: $accent;
+         margin-right: 30px;
+      }
+      
+   }
+
+   &__middle{
+      &-title{
+         font-size: 36px;
+         @extend %DMSans-Bold;
+         line-height: 32px;
+         color: $title;
+         margin-bottom: 45px;
+      }
+
+      &-text{
+         padding-bottom: 30px;
+         border-bottom: 3px solid #ebeef3;
+      }
+   }
+}
+
+.about-bottom{
+   display: flex;
+   justify-content: space-between;
+   padding-top: 35px;
+   &__item{
+      display: flex;
+      align-items: center;
+      &-img{
+         margin-right: 15px;
+      }
+
+      &-inner{
+         text-align: center;
+         @extend %DMSans-Bold;
+      }
+      &-num{
+         color:$title;
+         font-size: 36px;
+         line-height: 38px;
+      }
+      &-descr{
+         font-size: 16px;
+         line-height: 17px;
+         color: #4c4c4c
+      }
+   }
+}
+
+@media (max-width:1200px){
+   .about-descr{
+
+      &__content{
+         width: 80%;
+      }
+   }
+}
+@media (max-width:950px){
+   .about-descr{
+      padding: 80px 0;
+      &__inner{
+         flex-direction: column;
+      }
+      &__img-box{
+         max-width: none;
+         width: 100%;
+         
+         object-fit: contain;
+         margin-right: auto;
+         margin-bottom: 30px;
+      }
+      &__img{
+         object-fit: cover;
+         height: 650px;
+         margin: 0 auto;
+      }
+      &__content{
+         max-width: 100%;
+         width: 100%;
+      }
+   }
+}
+
+@media (max-width:600px){
+   .about-descr{
+      padding: 60px 0;
+      &__img{
+         height: 450px;
+      }
+      &__top-num{
+         font-size: 90px;
+      }
+      &__middle-title{
+         margin-bottom: 20px;
+      }
+   }
+}
+
+@media (max-width:485px){
+   .about-descr{
+      &__img{
+         height: 300px;
+      }
+   }
+   .about-bottom{
+      flex-direction: column;
+      align-items: center;
+      gap: 30px;
+   }
+}
+
+

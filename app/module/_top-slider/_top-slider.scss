@@ -1,0 +1,139 @@
+.top-slider{
+   padding: 0 15px;
+   &__inner{
+   padding: 215px 0px 0;
+   }
+   &__bg{
+      background-color:$header-bg;
+      
+   }
+   &__item{
+      display: flex !important;
+      
+      justify-content: space-between;
+   }
+
+   &__title{
+      width: 470px;
+      font-size: 72px;
+      line-height: 70px;
+      @extend %Rubik-Medium
+   }
+
+   &__descr{
+      width: 370px;
+      font-size: 18px;
+      line-height: 30px;
+     
+   }
+   
+   &__btn{
+      margin-top: 70px;
+      display: block;
+      width: 150px;
+      position: relative;
+      padding: 21px 25px;
+      background-color: $accent;
+      color: #fff;
+      font-size: 15px;
+      line-height: 12px;
+      @extend %Rubik-Medium;
+      margin-bottom: 200px;
+      transition: all 3s;
+      &::before{
+         content: "";
+         position: absolute;
+         background-image: url('../images/icons/shop-arrow.png');
+         background-repeat: no-repeat;
+         width: 22px;
+         height: 10px;
+         right: 18px;
+         top: 50%;
+         transform: translateY(-50%);      
+      }
+      
+   }
+
+   .slick-dots{
+      display: flex;
+      justify-content: center;
+      padding-bottom: 40px;
+      @extend %Rubik-Medium;
+      color: $default;
+   }
+   li{
+      margin-left: 10px;
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      background-color: #fde3cc;
+      
+      text-align: center;
+   }
+
+   .slick-dots button{
+      color: $default;
+   
+   }
+
+   .slick-active button{
+      color: $default;
+      border-radius: 50%;
+      width: 28px;
+      height: 28px;
+      background-color: #fff;
+   }
+
+  
+}
+
+@media(max-width: 1200px){
+   .top-slider{
+      &__images{
+         width: 80%;
+      }
+      &__item{
+         align-items: center;
+      }
+   }
+}
+
+@media(max-width: 950px){
+   .top-slider{
+      &__images{
+         display: none ;
+      }
+   }  
+}
+@media(max-width: 600px){
+   .top-slider{
+      &__inner{
+         padding-top: 160px;
+      }
+     &__title{
+      font-size: 48px;
+      line-height: 52px;
+      width: 400px;
+     }
+     &__btn{
+      margin-bottom: 90px;
+      margin-top: 50px;
+   }
+   }  
+}
+@media(max-width: 485px){
+   .top-slider{
+      &__title{
+       font-size: 38px;
+       line-height: 48px;
+       width: 280px;
+      }
+      &__descr{
+         width: auto;
+         font-size: 15px;
+         line-height: 25px;
+         padding: 0 40px 0 0;
+      }
+   
+    } 
+}

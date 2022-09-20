@@ -1,0 +1,306 @@
+.blog-one{
+   padding: 120px 0;
+   &__inner{
+      display: flex;
+   }
+   &__content{
+      width: 830px;
+      margin-right: 70px;
+   }
+   &__img-box{
+      position: relative;
+      margin-bottom: 40px;
+   }
+   &__text{
+      h4{
+         color: $title-2;
+         font-size: 36px;
+         margin-bottom: 30px; 
+      }
+      h6{
+         margin-bottom: 25px;
+         @extend %Rubik-Medium;
+      
+      }
+      p{
+         margin-bottom: 40px;
+      }
+      blockquote{
+         margin-bottom: 40px;
+         background-color: #edf1f4;
+         border-left: 6px solid $accent;
+         padding: 25px 35px;
+         span{
+            padding-left: 45px;
+            position: relative;
+            display: block;
+            &::before{
+               content:'';
+               position: absolute;
+               width: 20px;
+               height: 4px;
+               background-color: $accent;
+               left: 0;
+               top: 50%;
+               transform: translateY(-50%);
+            }
+         }
+      }
+   }
+   &__item{
+      padding-bottom: 60px;
+   }
+
+   &__img-left{
+      float: left;
+      margin-bottom: 15px;
+      margin-right: 30px;
+   }
+   &__img-right{
+      float: right;
+      margin-bottom: 15px;
+      margin-left: 30px;
+   }
+
+   &__item-decore{
+   position: absolute;
+   display: flex;
+   bottom: 0;
+   left: 0;
+   background-color: $accent;
+   color: #fff;
+   font-size: 12px;
+   padding: 20px 25px;
+}
+&__item-date{
+   padding-left: 20px;
+   position: relative;
+   margin-right: 25px;
+   &::before{
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 6px;
+      background-image: url('../images/icons/calendar.svg');
+      background-repeat: no-repeat;
+      width: 13px;
+      height: 15px;
+   }
+}
+&__item-user{
+   padding-left: 20px;
+   position: relative;
+   &::before{
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 6px;
+      background-image: url('../images/icons/user.svg');
+      background-repeat: no-repeat;
+      width: 13px;
+      height: 15px;
+      }
+   }
+
+   &__author{
+      padding: 20px 0;
+      margin-bottom: 45px;
+      border-top: 1px solid #ebebeb;
+      border-bottom: 1px solid #ebebeb;
+      display: flex;
+      align-items: center;
+   }
+
+   &__author-img{
+      width: 100%;
+      max-width: 76px;
+      object-fit: cover;
+      margin-right: 30px;
+   }
+   &__author-box{
+      display: flex;
+      width: 100%;
+      justify-content: space-between;
+   }
+   &__author-title{
+      color: $title-2;
+      font-size: 18px;
+      @extend %Rubik-Medium;
+      line-height: 25px;
+      margin-bottom: 15px;
+
+   }
+   &__author-post{
+      color: $secondary;
+   }
+   &__author-tags{
+      color: $title-2;
+      line-height: 26px;
+      margin-bottom: 20px;
+      display: flex;
+      span{
+         color: $secondary;
+         padding-left: 15px;
+         &:hover{
+            color: $accent;
+         }
+      }
+   }
+   &__author-share{
+      color: $title-2;
+      line-height: 26px;
+      display: flex;
+      align-items: center;
+         
+         
+      
+   }
+   &__author-share--span{
+      padding: 0 13px;
+      path{
+         fill: $secondary;
+         &:hover{
+            fill: $accent
+         }
+      }
+   }
+
+}
+
+.comment-blog{
+
+   &__title{
+      @extend %Rubik-Bold;
+      font-size: 24px;
+      line-height: 36px;
+      margin-bottom: 60px;
+   }
+
+   &__item{
+      display: flex;
+      margin-bottom: 30px;
+   }
+
+   &__item-img{
+      width: 100%;
+      height: 100%;
+      max-width: 100px;
+      max-height: 100px;
+      object-fit: cover;
+      margin-right: 30px;
+   }
+
+   &__item-content{
+      padding-bottom: 30px;
+      border-bottom: 1px solid #e0e0e0;
+   }
+
+   &__item-box{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 25px;  
+   }
+
+   &__item-name{
+      @extend %Rubik-Bold
+   }
+   &__item-date{
+      font-size: 14px;
+      color: $secondary;
+   }
+
+   &__item-descr{
+      color: #565872
+   }
+   &__item-reply{
+      padding-right: 20px;
+      position: relative;
+      font-size: 14px;
+      cursor: pointer;
+      &::after{
+         content: '';
+         position: absolute;
+         top: 0;
+         right: 0;
+         width: 13px;
+         height: 15px;
+         background-image: url('../images/icons/reply.svg');
+      }
+   }
+
+   & .comment-blog__item--reply{
+      max-width: 700px;
+      margin-left: auto;
+   }
+   &__form-label{
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 20px;
+   }
+
+   &__form-inner{
+      position: relative;
+      &::after{
+         content: '';
+         position: absolute;
+         width: 13px;
+         height: 15px;  
+         right: 20px;
+         top: 50%;
+         transform: translateY(-50%);
+         background-image: url('../images/icons/user-blue.svg');
+      }
+   }
+   &__form-inner--mail{
+      &::after{
+         width: 18px;
+         height: 13px;
+         
+         background-image: url('../images/icons/email.svg');
+      }
+   }
+   &__form-inner--comment{
+      &::after{
+         width: 20px;
+         height: 20px;
+         top: 30px;
+         background-image: url('../images/icons/message.svg');
+      }
+   }
+
+   &__form-input,
+   &__form-textarea{
+      width: 338px;
+      padding: 20px 40px 20px 20px;
+      border: 1px solid #e5e5e5;
+      outline: $accent;
+      font-size: 16px;
+      position: relative;
+      &::placeholder{
+         font-size: 16px;
+         color: $secondary
+      }
+    
+   }
+
+   &__form-textarea{
+      height: 120px;
+      width: 770px;
+      resize: none;
+      margin-bottom: 40px;
+   }
+
+   &__form-btn{
+      width: 190px;
+      height: 50px;
+      background-color: $accent;
+      text-transform: uppercase;
+      text-align: center;
+      color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+   }
+}

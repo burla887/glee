@@ -1,0 +1,120 @@
+.news{
+   margin-top: 190px;
+   .container-big{
+      padding: 0;
+   }
+   &__inner{
+      margin: 0 15px;
+      display: flex;
+      justify-content: space-between;
+   }
+
+   &__item{
+      max-width: 580px;
+      width: 100%;
+      background-color: $bg;
+      padding: 0 145px ;
+      display: flex;
+      &:nth-child(1){
+         margin-right: 30px;
+
+      }
+   }
+   &__photo{
+      margin-top: -100px;
+      margin-right: 60px;
+      width: 100%;
+   }
+   &__photo-img{
+      object-fit:contain;
+      
+   }
+   &__content{
+      padding: 75px 0;
+   }
+
+   &__title{
+      font-size: 26px;
+      line-height: 32px;
+      @extend %DMSans-Bold;
+      margin-bottom: 20px;
+   }
+   &__descr{
+      margin-bottom: 20px;
+   }
+
+   &__btn{
+      font-size: 15px;
+      line-height: 12px;
+      @extend %Rubik-Medium;
+      display: block;
+      width: 140px;
+      padding: 20px;
+      background-color: transparent;
+      border-radius: 4px;
+      border: 1px solid #b3b7b5;
+      position: relative;
+      transition: all .3s;
+      &::after{
+         content: '';
+         position: absolute;
+         background-image: url('../images/icons/news-arrow.png');
+         background-repeat: no-repeat;
+         width: 22px;
+         height: 10px;
+         right: 18px;
+         top: 50%;
+         transform: translateY(-50%); 
+         
+      }
+      &:hover{
+         background-color: $accent;
+      }
+   }
+   
+
+   
+}
+
+@media(max-width: 1660px){
+   .news{
+      &__photo{
+        display: none;
+      }
+     
+   }
+}
+
+@media(max-width: 1200px){
+   .news{
+      margin-top: 15px;
+      &__item{
+         max-width: none;
+         width: 50%;
+         padding: 0 50px;
+      }
+   }
+}
+
+@media(max-width: 768px){
+   .news{
+      &__inner{
+         flex-wrap: wrap;
+         padding: 0 30px;
+         margin: 0;
+         gap: 30px;
+      }
+      &__item{
+         width: 100%;
+         padding: 0 20px;
+         &:nth-child(1){
+            margin-right: 0;
+         }
+      }
+      &__content{
+         
+         padding: 50px 0;
+      }
+   }
+}
+

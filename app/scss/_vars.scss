@@ -31,7 +31,13 @@
    font-family: 'Rubik-Bold', sans-serif;
    font-weight: 700;
 }
-
+%checkbox{
+   width: 1px;
+   height: 1px;
+   overflow: hidden;
+   clip: rect(0 0 0 0);
+   position: absolute;
+}
 
 
 $default: #243f4d;
@@ -41,6 +47,7 @@ $secondary: #8b8b8b;
 $title: #1f2044;
 $header-bg: #fcd7b6;
 $bg: #fef7f0;
+$title-2:#333333;
 
 %title{
    @extend %DMSans-Bold;

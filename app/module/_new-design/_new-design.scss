@@ -1,0 +1,46 @@
+.new-design{
+   padding: 95px 0 120px;
+
+   &__inner{
+      padding-top: 80px;
+      display: flex;
+      align-items: center;
+      gap: 30px;
+      justify-content: center;
+      flex-wrap: wrap;
+   }
+
+   &__item{
+      width: 335px;
+      padding-top: 40px;
+      padding-left: 35px;
+      padding-bottom: 130px;
+      
+      cursor: pointer;
+      @extend %DMSans-Bold;
+      transition: all .3s;
+      &:hover{
+         margin-top: -10px;
+      }
+   }
+
+   &__item-title{
+      width: 160px;
+      font-size: 20px;
+      color: #191919;
+   }
+   &__item-text{
+      color: $accent;
+   }
+}
+
+@media(max-width:768px){
+   .new-design{
+      padding: 40px 0 50px;
+      &__item{
+         width: 100%;
+         background-repeat: no-repeat;
+         background-color: #f8f8f8;
+      }
+   }
+}

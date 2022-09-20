@@ -1,0 +1,18 @@
+.video{
+   background-image: url('../images/video-bg.jpg');
+   background-repeat: no-repeat;
+   background-size: cover;
+   background-position: center center;
+   padding: 185px 0;
+   &__icon{
+      margin: 0 auto;
+   }
+}
+@media(max-width:768px){
+   .video{
+      padding: 100px 0;
+      &__icon{
+         max-width: 70px;
+      }
+   }
+}
